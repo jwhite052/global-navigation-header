@@ -2,49 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1" />
     <title>Global Navigation</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-    <script src="main.js" /></script>
+    <script src="/scripts/main.js" /></script>
   </head>
   <body>
-    <nav id="global-navigation">
+    <header class="enterprise-header" role="banner">
+      <div class="enterprise-header__inner">
 
-      <!-- Brand -->
-      <div class="navigation__brand-section">
-        Logo
-      </div>
+        <!-- Brand -->
+        <div class="enterprise-header__brand">
+          <a href="#">Logo</a>
+        </div>
 
-      <!-- Navigation Toggle -->
-      <div class="navigation__menu-toggle">
-        View Menu
-      </div>
+        <!-- Mobile Navigation Toggle -->
+        <div class="enterprise-header__menu-toggle">
+          <a href="#" class="nav-show js-nav-toggle">
+      			<span class="nav-show-text">
+      				Menu
+      			</span>
+      			<span class="nav-show-text active-text">
+      				Close
+      			</span>
+      			<span class="nav-show__icon">
+      				<span class="nav-show__icon-inner">
+      					<span></span>
+      					<span></span>
+      					<span></span>
+      				</span>
+      			</span>
+      		</a>
+        </div>
 
-      <!-- Navigation Links -->
-      <div class="navigation__nav-section">
-        <ul class="mainNav">
-          <li class="mainNav__item">
-            <a href="#">Link</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#">Link</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#">Link</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#">Link</a>
-          </li>
-          <li class="mainNav__item">
-            <a href="#">Link</a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
+        <!-- Navigation -->
+        <nav class="navigation" role="navigation">
+          <ul class="main-nav">
+            <li class="main-nav__item">
+              <a href="#">Link</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Link</a>
+              <!--
+              <nav>
+                <ul class="sub-nav">
+                  <li class="sub-nav__item"><a href="#">Sublink</a></li>
+                  <li class="sub-nav__item"><a href="#">Sublink</a></li>
+                  <li class="sub-nav__item"><a href="#">Sublink</a></li>
+                  <li class="sub-nav__item"><a href="#">Sublink</a></li>
+                  <li class="sub-nav__item"><a href="#">Sublink</a></li>
+                </ul>
+              </nav>
+              -->
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Link</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Link</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Link</a>
+            </li>
+          </ul>
+        </nav><!-- /.navigation__nav-section -->
+      </div><!-- /.enterprise-header__inner -->
+    </header><!-- /.enterprise-header -->
     <section>
       <p>
         Body
