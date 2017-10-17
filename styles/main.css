@@ -96,7 +96,7 @@ body {
           position: relative;
           text-decoration: none;
           transition: all 0.2s ease-in;
-          font-weight: 900;
+          font-weight: bold;
           letter-spacing: 0.12em;
           text-transform: uppercase; }
           @media (min-width: 769px) {

@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('.js-nav-toggle').on('click', function(e) {
     e.preventDefault();
     $(this).toggleClass('active');
-    $('.navigation').stop(true, true).slideToggle("slow", function() {
+    $('.navigation').stop(true, true).slideToggle(400, function() {
       $(this).toggleClass('expanded');
     });
   });
