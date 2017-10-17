@@ -17,7 +17,11 @@
 
         <!-- Brand -->
         <div class="enterprise-header__brand">
-          <a href="http://www.jefferson.edu/"><img class="brand-logo" src="http://www.jefferson.edu/etc/designs/tju/university/images/160over90/tju-logo-skcc.png" alt="Jefferson"></a>
+          <a href="http://www.jefferson.edu/" style="border: 0 !important; outline: none !important;">
+            <!--[if lte IE 8]><img class="brand-logo" src="http://www.jefferson.edu/etc/designs/tju/university/images/160over90/tju-logo-skcc.png" alt="Jefferson"><![endif]-->
+            <!--[if gt IE 8]><img class="brand-logo" src="http://www.jefferson.edu/etc/designs/tju/university/images/160over90/tju-logo-skcc.png" alt="Jefferson"><![endif]-->
+            <!--[if !IE]> --><img class="brand-logo" src="/images/jefferson-enterprise_web-logo.svg" alt="Jefferson"><!-- <![endif]-->
+          </a>
         </div>
 
         <!-- Mobile Navigation Toggle -->
@@ -46,7 +50,7 @@
               <a href="http://www.jefferson.edu/university.html">University</a>
             </li>
             <li class="main-nav__item">
-              <a href="http://hospitals.jefferson.edu/">Health</a>
+              <a href="http://www.jeffersonhealth.org/index.html">Health</a>
             </li>
             <li class="main-nav__item">
               <a href="http://www.jefferson.edu/physicians.html">Physicians</a>
@@ -71,5 +75,15 @@
         </h1>
       </div>
     </section>
+    <section class="main">
+      <div class="main__inner">
+
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__inner">
+
+      </div>
+    </footer>
   </body>
 </html>

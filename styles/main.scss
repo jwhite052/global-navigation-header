@@ -1,8 +1,8 @@
 $mobile-width: 768px;
 $desktop-width: 1200px;
-$primary-color-1: #1641e5; /* blue */
-$primary-color-2: #f40606; /* red */
-$primary-color-3: #011e40; /* dark blue */
+$primary-color-blue: #2243dc;
+$primary-color-red: #f40606;
+$primary-color-darkblue: #011e40;
 
 @mixin mobile {
   @media (max-width: #{$mobile-width}) {
@@ -38,6 +38,9 @@ body {
     display: table;
     clear: both;
   }
+  * {
+    @include zero-margin-padding;
+  }
   @include mobile {
     padding: 10px 0 0 0;
     &::before {
@@ -49,13 +52,6 @@ body {
       top: 17px;
       right: 85px;
     }
-  }
-
-  /* Reset */
-
-  * {
-    box-sizing: border-box;
-    @include zero-margin-padding;
   }
 
   /* Inner container */
@@ -79,7 +75,9 @@ body {
       height: 90px;
     }
     .brand-logo {
-      height: 50px;
+      height: 60px;
+      border: 0;
+      outline: none;
     }
   }
 
@@ -114,7 +112,7 @@ body {
         }
         @include mobile {
           display: block;
-          margin: 0px 0px 40px 0px;
+          margin: 0px 0px 30px 0px;
           &:last-child {
             margin-bottom: 0px;
           }
@@ -130,10 +128,10 @@ body {
           letter-spacing: 0.12em;
           text-transform: uppercase;
           @include desktop {
-            font-size: 11px;
-            color: $primary-color-3;
+            font-size: 12px;
+            color: $primary-color-darkblue;
             display: block;
-            line-height: 69px;
+            line-height: 80px;
             &::after {
               content: '';
               position: absolute;
@@ -145,9 +143,9 @@ body {
               transition: all 0.2s ease-in;
             }
             &:hover {
-              color: $primary-color-1;
+              color: $primary-color-blue;
               &::after {
-                background-color: $primary-color-2;
+                background-color: $primary-color-red;
               }
             }
           }
@@ -155,8 +153,9 @@ body {
             display: inline;
             color: #fff;
             font-size: 18px;
+            font-weight: normal;
             &:hover {
-              color: $primary-color-2;
+              color: $primary-color-red;
             }
           }
           &.give-now {
@@ -165,10 +164,10 @@ body {
               line-height: 45px;
               padding-left: 15px;
               padding-right: 15px;
-              color: $primary-color-1;
+              color: $primary-color-blue;
               &:hover {
                 color: #fff;
-                background-color: $primary-color-1;
+                background-color: $primary-color-blue;
               }&::after {
                 display: none;
               }
@@ -229,10 +228,10 @@ body {
 
 .intro {
   height: 120px;
-  background-color: $primary-color-3;
+  background-color: $primary-color-darkblue;
   @include desktop {
     height: 120px;
-    background-color: $primary-color-3;
+    background-color: $primary-color-darkblue;
   }
   @include mobile {
     height: 100px;
@@ -252,8 +251,41 @@ body {
         font-size: 32px;
       }
       @include mobile {
-        font-size: 18px;
+        font-size: 24px;
       }
     }
+  }
+}
+
+.main {
+  background-color: #fff;
+  @include desktop {
+    min-height: 500px;
+  }
+  @include mobile {
+    min-height: 500px;
+  }
+  .main__inner {
+    margin: 0 auto;
+    max-width: $desktop-width;
+    padding: 20px 15px;
+  }
+}
+
+.footer {
+  background-color: #000222;
+  @include desktop {
+    min-height: 50px;
+  }
+  @include mobile {
+    min-height: 50px;
+  }
+  * {
+    @include zero-margin-padding;
+  }
+  .footer__inner {
+    margin: 0 auto;
+    max-width: $desktop-width;
+    padding: 0 15px;
   }
 }
